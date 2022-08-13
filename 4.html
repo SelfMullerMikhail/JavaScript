@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Homework</title>
 </head>
+
 <body>
-<!--
+  <!--
 Необязательное задание.
 
 Необходимо от пользователя получить число.
@@ -25,10 +27,16 @@
 
 Уточнение: пользователь всегда вводит корректное положительное целое число.
 -->
-<script>
-  "use strict";
+  <script>
+    "use strict";
 
-  // Здесь пишем решение, данный комментарий необходимо стереть.
-</script>
+    let number = prompt("Введите корректное положительное число");
+    let hundred = Math.floor(number % 1000 * 0.01);
+    let decimal = Math.floor(number % 100 * 0.1);
+    let units = Math.floor(number % 10);
+    alert(`Сотни: ${hundred} Десятки: ${decimal} Единицы: ${units}`);
+
+  </script>
 </body>
+
 </html>
