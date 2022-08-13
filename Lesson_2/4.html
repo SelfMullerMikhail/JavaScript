@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Homework</title>
 </head>
+
 <body>
-<!--
+  <!--
 Обязательное задание.
 
 Необходимо реализовать четыре функции, каждая функция должна принимать по два
@@ -28,10 +30,67 @@
 
 Необходимо для всех функций прописать комментарии jsdoc https://jsdoc.app/.
 -->
-<script>
-  "use strict";
+  <script>
+    "use strict";
 
-  // Здесь пишем решение, данный комментарий необходимо стереть.
-</script>
+    /**
+     * Function does subtraction from minimum number to maximum number.
+     * @param {number} val_1 - first numbers
+     * @param {number} val_2 - second numbers
+     * @returns {number} - subtraction
+     */
+    function subtraction(val_1, val_2) {
+      if (val_1 >= val_2) {
+        return val_1 - val_2;
+      }
+      else {
+        return val_2 - val_1;
+      }
+    };
+
+    /**
+     * Function does amount of two numbers.
+     * @param {number} val_1 - first numbers
+     * @param {number} val_2 - second numbers
+     * @returns {number} - amount
+     */
+    function sum(val_1, val_2) {
+      return val_1 + val_2;
+    };
+
+    /**
+    * Function does multiplication of two numbers.
+     * @param {number} val_1 - first numbers
+     * @param {number} val_2 - second numbers
+    * @returns {number} - multiplication
+    */
+    function multiplication(val_1, val_2) {
+      return val_1 * val_2;
+    };
+
+    /**
+  * Function does division from minimum number to maximum number.
+    * @param {number} val_1 - first numbers
+    * @param {number} val_2 - second numbers
+  * @returns {number} - division
+  */
+    function division(val_1, val_2) {
+      if (val_1 > val_2) {
+        return val_1 / val_2;
+      }
+      else {
+        return val_2 / val_1;
+      }
+    };
+
+    console.log(`subtraction(5, 2) : ${subtraction(5, 2)}`);
+    console.log(`subtraction(2, 6) : ${subtraction(2, 6)}`);
+    console.log(`subtraction)7, 7) : ${subtraction(7, 7)}`);
+    console.log(`sum(13, 4) : ${sum(13, 4)}`);
+    console.log(`multiplication(3, 10) : ${multiplication(3, 10)}`);
+    console.log(`division(10, 2) : ${division(10, 2)}`)
+    console.log(`division(4, 8) : ${division(4, 8)}`)
+  </script>
 </body>
+
 </html>
