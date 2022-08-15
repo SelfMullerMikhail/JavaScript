@@ -22,9 +22,27 @@
 -->
   <script>
     "use strict";
-    p
 
-  // Здесь пишем решение, данный комментарий необходимо стереть.
+    function return_Alert(a, b) {
+      const name = comparsion(a, b)
+      alert(name)
+    };
+
+    function comparsion(a, b) {
+      if ((a > 0 && b > 0)) {
+        return `a - b = ${a - b}`
+      }
+      else if (a < 0 && b < 0) {
+        return `a * b = ${a * b}`
+      }
+      else if ((a > 0 && b < 0) || (a < 0 && b > 0)) {
+        return `a + b = ${a + b}`
+      }
+    };
+
+    const a = prompt("Введите число 'а'");
+    const b = prompt("Введите число 'b");
+    return_Alert(a, b);
   </script>
 </body>
 
