@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Homework</title>
 </head>
+
 <body>
-<!--
+  <!--
 Обязательное задание.
 
 Необходимо данное задание выполнить в es5 стиле и в es6 стиле.
@@ -17,10 +19,42 @@
 метод должен уменьшать стоимость продукта на 25%.
 Необходимо продемонстрировать работу с объектом (в свободной форме).
 -->
-<script>
-  "use strict";
+  <script>
+    "use strict";
+    // es5
+    function ProductES5(name, cost) {
+      this.name = name;
+      this.cost = cost;
+    }
 
-  // Здесь пишем решение, данный комментарий необходимо стереть.
-</script>
+    ProductES5.prototype.make25Discount = function () {
+      this.cost = this.cost * 0.75;
+    }
+
+    const laptop = new ProductES5("huaweiD14", 85000);
+    console.log("name: " + laptop.name + "cost: " + laptop.cost);
+    laptop.make25Discount()
+    console.log("name: " + laptop.name + "cost: " + laptop.cost);
+
+    // es6
+
+    class ProductES6 {
+      constructor(name, cost) {
+        this.name = name;
+        this.cost = cost;
+      }
+
+      make25Discount() {
+        this.cost = this.cost * 0.75;
+      }
+    }
+
+    const phone = new ProductES6('Iphone', 90000);
+    console.log(`name: ${phone.name} cost: ${phone.cost}`)
+    phone.make25Discount();
+    console.log(`name: ${phone.name} cost: ${phone.cost}`)
+
+  </script>
 </body>
+
 </html>
